@@ -1,0 +1,54 @@
+<ion-header >
+  <ion-toolbar class="colorNav">
+
+    <ion-buttons slot="start">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="icon-only" name="menu-outline"></ion-icon>
+         
+      </ion-button>
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+      <ion-avatar>
+        
+      </ion-avatar>
+    </ion-buttons>
+
+    <ion-title >Confident Girl</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+
+  <ion-card class="card">
+    <ion-img src="/assets/img/Inicio.PNG" ></ion-img>
+    <ion-card-header>
+      <ion-card-subtitle class="subtitulo">POR Y PARA GAMERS</ion-card-subtitle>
+      <ion-card-title class="titulo">☆ALLS STARS☆</ion-card-title>
+      
+    </ion-card-header>
+    <ion-card-content class="contenido">
+      All Star es una comunidad y marca conformada por amigos que en sus pasatiempos juegan y disfrutan de aquello, una comunidad hecha por Gamers para Gamers. Tenemos el objetivo de llegar a todos los usuarios de la comunidad para que tengan mejores artículos para competir, siendo todo esto relación calidad/precio que es lo más importante para toda nuestra comunidad.
+    </ion-card-content>
+    
+  </ion-card>
+
+
+    <ion-list>
+      <ion-item *ngFor="let c of componentes"
+          [routerLink] = "c.redirecTo"
+          detail="true"> 
+          <ion-icon [name]="c.icon"
+            slot="start"
+            color="primary"></ion-icon> 
+            {{c.name}}
+      </ion-item>
+   </ion-list>
+
+   <!--
+   <ion-button routerLink="/alert">Alert</ion-button>
+   <ion-button routerLink="/action-sheet">Action Sheet</ion-button>-->
+
+    
+</ion-content>
+
